@@ -1,7 +1,21 @@
-dictionaries = {"Bug": "An error", "Code": "Instructions for a computer"}
+studentScores = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62}
 
-print(dictionaries["Bug"])
+studentGrades = {}
 
-dictionaries["VSCode"] = "A Microsoft IDE"
+for student in studentScores:
+    score = studentScores[student]
+    if score > 90:
+        studentGrades[student] = "Outstanding"
+    elif score > 80:
+        studentGrades[student] = "Exceeds Expectations"
+    elif score > 70:
+        studentGrades[student] = "Acceptable"
+    else:
+        studentGrades[student] = "Fail"
 
-print(dictionaries)
+print(studentGrades)

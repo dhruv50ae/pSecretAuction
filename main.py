@@ -1,21 +1,20 @@
-studentScores = {
-    "Harry": 81,
-    "Ron": 78,
-    "Hermione": 99,
-    "Draco": 74,
-    "Neville": 62}
+travelLog = [
+    {
+        "country": "France", "visit": 12, "cities": ["Paris", "Lille", "Dijon"]
+    },
+    {
+        "country": "Germany", "visit": 5, "cities": ["Berlin", "Hamburg", "Stuttgart"]
+    }
+]
 
-studentGrades = {}
 
-for student in studentScores:
-    score = studentScores[student]
-    if score > 90:
-        studentGrades[student] = "Outstanding"
-    elif score > 80:
-        studentGrades[student] = "Exceeds Expectations"
-    elif score > 70:
-        studentGrades[student] = "Acceptable"
-    else:
-        studentGrades[student] = "Fail"
+def addNewCountry(countryVisited, timesVisited, citiesVisited):
+    newCountry = {}
+    newCountry["country"] = countryVisited
+    newCountry["visits"] = timesVisited
+    newCountry["cities"] = citiesVisited
+    travelLog.append(newCountry)
 
-print(studentGrades)
+
+addNewCountry("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travelLog)
